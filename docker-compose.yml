@@ -1,10 +1,9 @@
-
 services:
   emqx1:
     image: emqx:5.0.26
     container_name: mqtt-broker-emqx1
     environment:
-    - "EMQX_NODE_NAME=emqx@vithsutra1"
+    - "EMQX_NODE_NAME=emqx@biometric.mqtt.vsensetech.in"
     # healthcheck:
     #   test: ["CMD", "/opt/emqx/bin/emqx_ctl", "status"]
     #   interval: 5s
@@ -22,6 +21,4 @@ services:
       - 18083:18083 
 
     volumes:
-      - ./emqx/data:/opt/emqx/data
-      - ./emqx/etc:/opt/emqx/etc
-      - ./emqx/log:/opt/emqx/log
+      - ./emqx:/opt/emqx
