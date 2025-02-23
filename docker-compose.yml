@@ -20,5 +20,5 @@ services:
       - 8883:8883
       - 18083:18083 
 
-    volumes:
-      - ./emqx:/opt/emqx
+    # volumes:
+    #   - ./emqx:/opt/emqx
